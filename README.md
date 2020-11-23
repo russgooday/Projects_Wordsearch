@@ -1,3 +1,4 @@
+<img src='./images/header.jpg' width='600'/>
 ## Wordsearch
 Some years ago I needed to home school my daughter, then about 7 years old. To supplement her English lessons, I decided to write a script to generate printable wordsearches that she could colour in.
 
