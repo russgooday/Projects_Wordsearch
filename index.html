@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Word Search</title>
+    <meta name="description" content="Word Search">
+    <meta name="author" content="Russell">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id='body'>
+    <main class='mainPage'>
+        <div class='formPage'>
+            <header>
+                <div class='contactDetails'>
+                    <p>Scripted by Russell Gooday ©2016</p>
+                </div>
+            </header>
+            <form id='formWords' class='formWords' name='formWords' action=''>
+                <fieldset>
+                    <legend>Wordsearch</legend>
+                    <div class='inputWrapper group'>
+                        <label for='title'>Title: <em>*</em></label>
+                        <input type='text' name='title' pattern="^[-a-zA-Z \.]+$" placeholder='Fruit' required autofocus>
+                    </div>
+                    <div class='inputWrapper group'>
+                        <label for='info'>Instructions: </label>
+                        <input type='text' name='info' pattern="^[-a-zA-Z \.!\?]+$" placeholder='e.g. Colour in as many matching fruit names as you can.'>
+                    </div>
+                    <div class='inputWrapper group'>
+                        <label for='level'>Difficulty: </label>
+                        <select name='level'>
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option selected>Hard</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class='textWrapper group'>
+                        <label for='words'>Word List: <em>*</em> <span>Enter a list of words sepearted by commas, spaces or new lines.</span></label>
+                        <textarea type='text' name='words' placeholder='e.g. apple, banana, apricot, pineapple, orange, tangerine etc.' required></textarea>
+                    </div>
+                </fieldset>
+                <input id='submit' class='button' type="submit" value="Submit">
+            </form>
+        </div>
+        <div class='wordsearchWrapper hide'>
+            <h1 class='title'></h1>
+            <p class='info'><p>
+            <table id='wordsearch'>
+                <tbody>
+                </tbody>
+            </table>
+            <div class='wordsearchButtons'>
+                <p>Note: These buttons will not appear in the printed version</p>
+                <input id='scramble' type='button' class='button' value='Scramble' title='Mix up the Words'>
+                <input id='answers' type='button' class='button' value='Answers' title='Toggle on and off the Answers'>
+                <input id='back' type='button' class='button' value='Back to Form' title='Go back to the Form'>
+            </div>
+            <ul id='wordList' class='wordList'></ul>
+        </div>
+    </main>
+<script src='js/qSelect.js'></script>
+<script src='js/wordsearch.js'></script>
+<script src='js/main.js'></script>
+</body>
+</html>

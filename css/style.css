@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/* --------------- Resets -------------------- */
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    /* 1rem */
+    height: 100%; }
+
+p, article, blockquote, figure, ol, ul {
+    margin: 0;
+    padding: 0; }
+
+ul {
+    list-style: none; }
+
+li {
+    display: block; }
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit; }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition-property: background-color, border-color, color, opacity;
+    transition-property: background-color, border-color, color, opacity;
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+
+table {
+    border-collapse: collapse; }
+
+input, 
+select, 
+textarea, 
+button{
+    font-family:inherit; }
+
+* {
+    box-sizing: border-box; }
+
+/* ----------------------------- */
+
+body {
+    width: 800px;
+    height: 1132px;
+    margin: 0 auto;
+    background-color: #333;
+    font: normal 1.1rem 'Open Sans', Arial, sans-serif; /*Comic Sans MS*/
+}
+
+main {
+    display: block;
+    width: 800px;
+    height: 100%;
+    margin: 0;
+    color: #111;
+    background-color: white;
+}
+
+.formPage{
+    display: block;
+    height: 100%;
+    font-family: 'Open Sans', arial, sans-serif;
+    background: -webkit-linear-gradient(bottom, #979392 0%, #c3c3c1 80%);
+    background: linear-gradient(to top, #979392 0%, #c3c3c1 80%);
+}
+
+header {
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 230px;
+    background: #000 url('../images/header.jpg') no-repeat;
+}
+
+.contactDetails {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+}
+
+.contactDetails p {
+    text-align: right;
+    font: bold 1rem/1.5rem 'Open Sans', Arial, sans-serif;
+    color: white;
+    text-shadow: -1px 1px 3px rgba(0,0,0,.3);
+}
+
+.contactDetails a:hover {
+    color: yellow;
+}
+
+form {
+    font-family: 'Open Sans', arial, sans-serif;
+    margin: 1rem;
+    padding: 0;
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+}
+
+form em {
+    font-weight: bold;
+    color: yellow;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    padding: .5rem 0;
+    color: yellow;
+    background-color: #333;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: rgba(0,0,0,.5);
+}
+
+.inputWrapper, 
+.textWrapper {
+    border-bottom: 1px dashed black;
+    padding: 2rem 1rem;
+}
+
+.inputWrapper label {
+    float:left;
+    width: 130px;
+    line-height: 50px;
+    padding: 0 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    border-radius: 10px 0 0 10px;
+}
+
+.inputWrapper input, 
+.inputWrapper select{
+    float: left;
+    width: 600px;
+    height: 50px;
+    padding: 0 1rem;
+    font-size: .9rem;
+    border: 0;
+    outline: none;
+    background-color: #ddd;
+    box-shadow: inset 0 1px 0 1px rgba(0,0,0,.5);
+    border-radius: 0 10px 10px 0;
+}
+
+.inputWrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 48px;
+    background: #ddd url('../images/arrow.png') no-repeat right center;
+    background-size: 22px 50px;
+    width: 130px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.inputWrapper select option {
+    background-color: white;
+    padding: .3rem 1rem;
+    margin: 0;
+}
+
+.textWrapper label {
+    display: block;
+    width: 730px;
+    line-height: 50px;
+    padding: 0 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.textWrapper span {
+    color: yellow;
+}
+
+.textWrapper textarea {
+    resize: none;
+    padding: 1rem;
+    width: 730px;
+    height: 14rem;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+    background-color: #ddd;
+    box-shadow:inset 0 1px 0 1px rgba(0,0,0,.5);
+    border-radius: 0 0 10px 10px;
+}
+
+.inputWrapper input:focus, 
+.inputWrapper select:focus option,
+.textWrapper textarea:focus {
+    background-color: white;
+}
+
+.button {
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: .5rem 2rem;
+    color: #ccc;
+    border: 3px solid #ccc;
+    background-color: #333;
+    outline: 0;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.button:hover,
+.wordsearchButtons .button:hover {
+    -webkit-transition: linear .2s;
+    transition: linear .2s;
+    color: yellow;
+    border-color: yellow;
+}
+
+.wordsearchButtons .button {
+    font-family: 'Open Sans', Arial, sans-serif;
+    border-color: gray;
+    color: white;
+    margin-left: 2.2rem;
+}
+
+.wordsearchWrapper {
+    display: block;
+    width: 650px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+p {
+    text-align: center;
+}
+
+table {
+    display: block;
+    width: 650px;
+    height: 650px;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+}
+
+tbody {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.wordsearchButtons {
+    background-color: #ddd;
+    border-bottom: 1px dashed black;
+    border-top: 1px dashed black;
+}
+
+ul {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+li {
+    float: left;
+    width: 25%;
+    line-height: 3rem;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+/* clear fix */
+.group::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+}
+
+.group {
+    display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .group {
+    height: 1%;
+}
+
+.group {
+    display: block;
+}
+/* close commented backslash hack  */
+
+.hide {
+    display: none;
+}
+
+#wordsearch td {
+    color: black;
+    -webkit-transition: background-color linear .3s;
+    transition: background-color linear .3s;
+
+}
+
+.hideAnswers td{
+    font-weight: normal;
+    background-color: white;
+}
+
+.wordList li{
+    background-color: transparent;
+}
+
+.red {
+    font-weight: bold;
+    background-color: rgba(255,0,0,.75);
+    color: tomato;
+}
+
+.orange {
+    font-weight: bold;
+    background-color: rgba(255,165,0,.5);
+    color: orange;
+}
+
+.blue {
+    font-weight: bold;
+    background-color: rgba(0,0,255,.5);
+    color: blue;
+}
+
+.purple {
+    font-weight: bold;
+    background-color: rgba(128,0,128,.5);
+    color: purple;
+}
+
+.green {
+    font-weight: bold;
+    background-color: rgba(50,205,50,.5);
+    color: limegreen;
+}
+
+.magenta {
+    font-weight: bold;
+    background-color: rgba(255,0,255,.5);
+    color: magenta;
+}
+
+.pink {
+    font-weight: bold;
+    background-color: rgba(255,20,147,.5);
+    color: deeppink;
+}
+
+@media print {
+	
+	body {
+		background-color: white;
+		-webkit-print-color-adjust: exact;
+	}
+    .wordsearchButtons {
+        display: none;
+    } 
+
+    #wordsearch td {
+        -webkit-print-color-adjust: exact;
+    }
+
+}
